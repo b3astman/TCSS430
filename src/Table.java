@@ -37,10 +37,24 @@ public class Table {
     public void show(){
         System.out.println("Sequence Number    Router Port Number    Destination Dddress    Cost    Time");
         Node n = node;  
-        for(int i = 1; i < 11; i++){
-        n = n.myNext;
-        System.out.printf("%-19s%-22s%-23s%-8s%-4s",i,n.myIp,n.myNext.myIp,n.myCost,n.myTime);
+        for(int i = 1; i < 4; i++){
+        System.out.printf("%-19s%-22s%-23s%-8s%-4s",i,"115.200.10.20",n.myNext.myIp,n.myCost,n.myTime);
         System.out.println();
+        n = n.myNext;
+        }
+        
+        for(int j= 4 ; j < 8; j++){
+        System.out.printf("%-19s%-22s%-23s%-8s%-4s",j,"90.115.150.70",n.myNext.myIp,n.myCost,n.myTime);
+        System.out.println();
+        n = n.myNext;
+        
+        }
+        
+        for(int k = 8 ; k < 11; k++){
+            System.out.printf("%-19s%-22s%-23s%-8s%-4s",k,"10.160.30.122"
+            		+ "",n.myNext.myIp,n.myCost,n.myTime);
+            System.out.println();
+            n = n.myNext;
         }
     }
 }
